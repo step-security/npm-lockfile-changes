@@ -1,0 +1,33 @@
+{
+  "name": "@step-security/npm-lockfile-changes",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "github:step-security/npm-lockfile-changes",
+  "author": "step-security",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build ./src/action.js -m --target es2021",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1",
+    "axios": "^1.19.0",
+    "js-base64": "^3.7.2",
+    "markdown-table": "^3.0.2",
+    "semver": "^7.3.7",
+    "snyk-nodejs-lockfile-parser": "^1.38.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@vercel/ncc": "^0.33.4",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.13.0",
+    "eslint-plugin-jest": "^26.1.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2"
+  }
+}

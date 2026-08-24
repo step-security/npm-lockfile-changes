@@ -1,0 +1,20 @@
+name: NPM Lockfile Changes
+on: [pull_request, workflow_dispatch]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: NPM Lockfile Changes
+        uses: ./
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: '[Test] NPM Lockfile Changes Detached Package'
+        uses: ./
+        with:
+          path: tests/ci/package-lock.json
+          token: ${{ secrets.GITHUB_TOKEN }}
