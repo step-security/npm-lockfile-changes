@@ -3,10 +3,14 @@ const { markdownTable } = require('markdown-table')
 const { STATUS, countStatuses } = require('./utils')
 
 const ASSETS_URL = {
-  ADDED: 'https://raw.githubusercontent.com/step-security/npm-lockfile-changes/main/assets/added.svg',
-  DOWNGRADED: 'https://raw.githubusercontent.com/step-security/npm-lockfile-changes/main/assets/downgraded.svg',
-  REMOVED: 'https://raw.githubusercontent.com/step-security/npm-lockfile-changes/main/assets/removed.svg',
-  UPDATED: 'https://raw.githubusercontent.com/step-security/npm-lockfile-changes/main/assets/updated.svg',
+  ADDED:
+    'https://raw.githubusercontent.com/step-security/npm-lockfile-changes/main/assets/added.svg',
+  DOWNGRADED:
+    'https://raw.githubusercontent.com/step-security/npm-lockfile-changes/main/assets/downgraded.svg',
+  REMOVED:
+    'https://raw.githubusercontent.com/step-security/npm-lockfile-changes/main/assets/removed.svg',
+  UPDATED:
+    'https://raw.githubusercontent.com/step-security/npm-lockfile-changes/main/assets/updated.svg',
 }
 
 const getStatusLabel = (status) =>
